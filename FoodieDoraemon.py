@@ -56,6 +56,8 @@ while run:
             result=font2.render(f"{SCORE}",True,(194,122,37))
             screen.blit(result,(800,400))
             pygame.mixer.music.pause()
+            cap.release()
+            cv2.destroyAllWindows()
     else:
             success, img = cap.read()
             _, faces = detector.findFaceMesh(img,draw=False)
